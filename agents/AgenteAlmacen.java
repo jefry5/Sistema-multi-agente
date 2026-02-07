@@ -40,7 +40,7 @@ public class AgenteAlmacen extends Agent {
                         reply.setContent("AGOTADO");
                     }
                     myAgent.send(reply);
-                    System.out.println(getLocalName() + ": Verifiqué stock para " + producto + " -> " + reply.getContent());
+                    System.out.println(getLocalName() + ": Verifique stock para " + producto + " -> " + reply.getContent());
                 } else {
                     block();
                 }

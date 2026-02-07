@@ -27,21 +27,21 @@ public class AgenteComprador extends Agent {
                         msg.addReceiver(vendedor);
                         msg.setContent(pedido);
                         myAgent.send(msg);
-                        System.out.println("Comprador: Envié solicitud para " + pedido);
+                        System.out.println("Comprador: Envie solicitud para " + pedido);
                         
                         ACLMessage respuesta = myAgent.blockingReceive(5000);
                         if (respuesta != null) {
                             System.out.println("Comprador: Respuesta recibida -> " + respuesta.getContent());
                         } else {
-                            System.out.println("Comprador: No recibí respuesta a tiempo.");
+                            System.out.println("Comprador: No recibi respuesta a tiempo.");
                         }
                         
                         indice++;
                     } else {
-                        System.out.println("Comprador: No encontré vendedor disponible en Páginas Amarillas.");
+                        System.out.println("Comprador: No encontre vendedor disponible en Paginas Amarillas.");
                     }
                 } else {
-                    System.out.println("Comprador: Ya realicé todas mis compras. Terminando.");
+                    System.out.println("Comprador: Ya realice todas mis compras. Terminando.");
                     stop();
                     doDelete();
                 }
